@@ -18,7 +18,7 @@ def home_content():
             user_id = app.storage.user.get("userId")
             is_owner = bool(user_id and str(pet["user"].get("_id")) == str(user_id))
 
-            with ui.dialog() as dialog, ui.card().style("min-width:380px; max-width:540px; padding:1.2em;"):
+            with ui.dialog() as dialog, ui.card().style("width:min(420px, 90vw); max-width:540px; padding:1.2em;"):
                 if pet.get("images"):
                     ui.image(f"{BACKEND}/images/pets/{pet['images'][0]}").style(
                         "width:100%; max-height:260px; object-fit:cover; border-radius:8px;"
@@ -90,7 +90,8 @@ def home_content():
                 with container:
                     for pet in available:
                         with ui.card().style(
-                            "width:240px; border-radius:10px; overflow:hidden;"
+                            "flex:1 1 220px; max-width:280px; min-width:200px;"
+                            " border-radius:10px; overflow:hidden;"
                             " border:1px solid #e0e0e0; box-shadow:0 2px 8px rgba(0,0,0,0.08);"
                         ):
                             if pet.get("images"):

@@ -11,12 +11,12 @@ GLOBAL_CSS = """
   * {
     padding: 0;
     margin: 0;
-    font-family: Helvetica;
     box-sizing: border-box;
   }
 
   html, body {
     min-height: 100vh;
+    font-family: Helvetica;
     background: linear-gradient(180deg, #eef3fb 0%, #f8fafc 45%, #eef3fb 100%);
   }
 

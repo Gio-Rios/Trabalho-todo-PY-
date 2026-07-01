@@ -13,9 +13,11 @@ def navbar():
     user_id = app.storage.user.get("userId")
 
     with ui.element("nav"):
-        with ui.element("div").classes("brand"):
+        with ui.link(target="/").classes("brand"):
             ui.image("/assets/img/logo.png").classes("brand-logo")
-            ui.html('<a href="/" style="text-decoration:none"><h2 style="color:#16479D">Get A Pet</h2></a>')
+            ui.label("Get A Pet").style(
+                "color:#16479D; font-weight:bold; font-size:1.4em; line-height:1; margin:0;"
+            )
         with ui.element("ul"):
             with ui.element("li"):
                 ui.link("Adotar", "/")

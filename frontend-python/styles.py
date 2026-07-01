@@ -15,6 +15,17 @@ GLOBAL_CSS = """
     box-sizing: border-box;
   }
 
+  html, body {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #eef3fb 0%, #f8fafc 45%, #eef3fb 100%);
+  }
+
+  .nicegui-content {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
   h1 {
     color: #16479D;
     margin-bottom: 1em;
@@ -34,11 +45,13 @@ GLOBAL_CSS = """
     padding: 0.8em 2em;
     background-color: #fff;
     border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 6px rgba(22, 71, 157, 0.06);
   }
   nav .brand {
     display: flex;
     align-items: center;
     gap: 0.6em;
+    text-decoration: none;
   }
   nav .brand img {
     width: 48px;
@@ -58,6 +71,7 @@ GLOBAL_CSS = """
 
   /* Conteúdo das páginas */
   section {
+    flex: 1;
     padding: 2em;
   }
 
@@ -66,7 +80,7 @@ GLOBAL_CSS = """
     padding: 1.2em 2em;
     text-align: center;
     border-top: 1px solid #eee;
-    margin-top: 2em;
+    background-color: #fff;
   }
 
   /* Pet cards grid */

@@ -36,7 +36,8 @@ def my_adoptions_content():
                 with container:
                     for pet in pets:
                         with ui.card().style(
-                            "width:260px; border-radius:10px; overflow:hidden;"
+                            "flex:1 1 240px; max-width:300px; min-width:220px;"
+                            " border-radius:10px; overflow:hidden;"
                             " border:1px solid #e0e0e0; box-shadow:0 2px 8px rgba(0,0,0,0.08);"
                         ):
                             if pet.get("images"):

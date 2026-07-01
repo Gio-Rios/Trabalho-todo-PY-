@@ -15,7 +15,7 @@ def my_pets_content():
             ui.html('<p>Faça <a href="/login" style="color:#16479D; font-weight:bold;">login</a> para ver seus pets.</p>')
             return
 
-        with ui.row().style("align-items:center; justify-content:space-between; margin-bottom:0.5em;"):
+        with ui.row().style("align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.6em; margin-bottom:0.5em;"):
             ui.html("<h1>Meus Pets</h1>")
             ui.button("+ Cadastrar novo pet", on_click=lambda: ui.navigate.to("/pets/add")).style(
                 "background:#16479D; color:white; font-weight:bold; border-radius:5px; padding:0.5em 1.2em;"
@@ -42,7 +42,8 @@ def my_pets_content():
                     for pet in pets:
                         pet_id = pet["_id"]
                         with ui.card().style(
-                            "width:260px; border-radius:10px; overflow:hidden;"
+                            "flex:1 1 240px; max-width:300px; min-width:220px;"
+                            " border-radius:10px; overflow:hidden;"
                             " border:1px solid #e0e0e0; box-shadow:0 2px 8px rgba(0,0,0,0.08);"
                         ):
                             if pet.get("images"):

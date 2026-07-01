@@ -16,7 +16,8 @@ def navbar():
         with ui.link(target="/").classes("brand"):
             ui.image("/assets/img/logo.png").classes("brand-logo")
             ui.label("Get A Pet").style(
-                "color:#16479D; font-weight:bold; font-size:1.4em; line-height:1; margin:0;"
+                "color:#16479D; font-weight:bold; font-size:1.4em; line-height:1;"
+                " margin:0; white-space:nowrap;"
             )
         with ui.element("ul"):
             with ui.element("li"):

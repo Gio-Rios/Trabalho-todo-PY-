@@ -24,6 +24,7 @@ GLOBAL_CSS = """
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: stretch;
   }
 
   h1 {
@@ -42,7 +43,9 @@ GLOBAL_CSS = """
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.8em 2em;
+    flex-wrap: wrap;
+    gap: 0.8em;
+    padding: 0.8em clamp(1em, 4vw, 2em);
     background-color: #fff;
     border-bottom: 1px solid #eee;
     box-shadow: 0 2px 6px rgba(22, 71, 157, 0.06);
@@ -53,6 +56,11 @@ GLOBAL_CSS = """
     gap: 0.6em;
     text-decoration: none;
   }
+  nav .brand .brand-logo {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+  }
   nav .brand img {
     width: 48px;
     height: 48px;
@@ -60,8 +68,9 @@ GLOBAL_CSS = """
   }
   nav ul {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
-    gap: 1.5em;
+    gap: 0.6em 1.2em;
   }
   nav ul a {
     text-decoration: none;
@@ -69,10 +78,25 @@ GLOBAL_CSS = """
     font-weight: bold;
   }
 
+  @media (max-width: 700px) {
+    nav {
+      justify-content: center;
+      text-align: center;
+    }
+    nav .brand {
+      justify-content: center;
+      width: 100%;
+    }
+    nav ul {
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
   /* Conteúdo das páginas */
   section {
     flex: 1;
-    padding: 2em;
+    padding: 1.2em clamp(1em, 4vw, 2em);
   }
 
   /* Footer */

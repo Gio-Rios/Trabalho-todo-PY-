@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+public/images/users/*
+public/images/pets/*
+!public/images/users/.gitkeep
+!public/images/pets/.gitkeep

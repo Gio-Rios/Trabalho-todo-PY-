@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(winget *)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); cd \"D:\\\\desktop\\\\15_GET_A_PET-python\\\\backend-python\"; python -m venv .venv; Write-Host \"Backend venv criado\")",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); cd \"D:\\\\desktop\\\\15_GET_A_PET-python\\\\frontend-python\"; python -m venv .venv; Write-Host \"Frontend venv criado\")",
+      "PowerShell(docker --version 2>&1; docker ps 2>&1 | Select-Object -First)",
+      "PowerShell(Get-Service *)",
+      "PowerShell(Test-NetConnection *)",
+      "PowerShell(Start-Sleep -Seconds 4; $null)",
+      "PowerShell(Stop-Process *)",
+      "PowerShell(Start-Sleep -Seconds 6; $null)",
+      "Skill(run)",
+      "PowerShell(Start-Sleep -Seconds 5; $null)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); python -m pip show playwright 2>&1 | Select-Object -First 2)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); python -m pip install playwright --quiet 2>&1 | Select-Object -Last 3; python -m playwright install chromium 2>&1 | Select-Object -Last 5)",
+      "PowerShell(Get-NetTCPConnection *)",
+      "PowerShell(New-Item *)",
+      "PowerShell(Start-Process -FilePath \"uv\" -ArgumentList \"run\",\"python\",\"manage.py\",\"runserver\",\"8000\" -WorkingDirectory \"D:\\\\desktop\\\\16_GET_A_PET_DJANGO\" -WindowStyle Hidden -PassThru | Select-Object Id)",
+      "PowerShell(Start-Sleep -Seconds 3; Invoke-WebRequest -Uri \"http://localhost:8000/\" -UseBasicParsing | Select-Object StatusCode, -ExpandProperty Content | Select-Object -First 5)",
+      "PowerShell($r = Invoke-WebRequest -Uri \"http://localhost:8000/\" -UseBasicParsing; $r.StatusCode)",
+      "PowerShell(uv run *)",
+      "PowerShell(Start-Process \"msedge.exe\" -ArgumentList \"http://localhost:8000/\" 2>&1; Start-Sleep -Seconds 2; Write-Host \"Navegador aberto\")",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git log *)"
+    ]
+  }
+}

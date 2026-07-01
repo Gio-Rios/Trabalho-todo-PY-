@@ -35,9 +35,11 @@ def navbar():
                     async def do_logout():
                         app.storage.user.clear()
                         ui.navigate.to("/")
-                    ui.button("Sair", on_click=do_logout).style(
-                        "background:none; border:none; color:#16479D; font-weight:bold;"
-                        " cursor:pointer; font-size:1em; padding:0; box-shadow:none;"
+                    ui.button("Sair", on_click=do_logout).props("flat dense no-caps").classes(
+                        "logout-btn"
+                    ).style(
+                        "background:none; font-weight:bold; cursor:pointer;"
+                        " font-size:1em; padding:0; min-height:0; box-shadow:none;"
                     )
             else:
                 with ui.element("li"):

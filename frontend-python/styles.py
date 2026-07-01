@@ -72,10 +72,23 @@ GLOBAL_CSS = """
     list-style: none;
     gap: 0.6em 1.2em;
   }
+  nav ul li {
+    display: flex;
+    align-items: center;
+  }
   nav ul a {
     text-decoration: none;
     color: #16479D;
     font-weight: bold;
+  }
+
+  nav .logout-btn,
+  nav .logout-btn .q-btn__content {
+    color: #c62828 !important;
+  }
+  nav .logout-btn:hover,
+  nav .logout-btn:hover .q-btn__content {
+    color: #000 !important;
   }
 
   @media (max-width: 700px) {
